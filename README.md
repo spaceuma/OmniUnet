@@ -1,6 +1,7 @@
 # OmniUnet
 
 [![arxiv](https://img.shields.io/badge/arXiv-2508.00580-b31b1b.svg)](https://doi.org/10.48550/arXiv.2508.00580)
+[![Data](https://img.shields.io/badge/Data-DOI-green)](https://doi.org/10.5281/zenodo.15496884)
 
 Code associated with the article: **"OmniUnet: A Multimodal Network for Unstructured Terrain Segmentation on Planetary Rovers Using RGB, Depth, and Thermal Imagery".**
 
@@ -13,7 +14,7 @@ Code associated with the article: **"OmniUnet: A Multimodal Network for Unstruct
 ## Links
 
 - arXiv article: <https://doi.org/10.48550/arXiv.2508.00580>
-- dataset: <https://10.5281/zenodo.15496883>
+- dataset: <https://doi.org/10.5281/zenodo.15496884>
 
 ## Citation
 
@@ -44,7 +45,7 @@ A diagram of the OmniUNet architecture is shown below:
 
 ## Docker configuration
 
-An Ubuntu host system is needed to run the files located at the repo, as we use a Nvidia GPU to train the network. First of all, we must install the docker core:
+A Ubuntu host system is needed to run the files located in this repo, as we use an Nvidia GPU to train the network. First of all, we must install the docker core:
 
 ```bash
 sudo apt-get update
@@ -150,7 +151,7 @@ python3 predict.py -m=path_to_your_weights.pth -d=rgbdt -c=6 -i=path_to_rgb_img.
 python3 predict_metrics.py -m=path_to_your_weights.pth -d=rgbdt -c=6 -i=path_to_rgb_img.png -p=path_to_depth_img.csv  -T=path_to_thermal_img.csv -g=path_to_groundtruth_mask.png
 ```
 
-#### Multi images metrics mode
+#### Multi-image metrics mode
 
 ```bash
 python3 predict_multi_metrics.py -m=path_to_your_weights.pth -d=rgbdt -c=6 -i=path_to_rgb_img_folder -p=path_to_depth_img_folder -T=path_to_thermal_img_folder -g=path_to_groundtruth_mask_folder
